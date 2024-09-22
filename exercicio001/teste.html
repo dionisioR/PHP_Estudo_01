@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card com Iframe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .card {
+            width: 300px; /* largura do card */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: white;
+        }
+        .card iframe {
+            width: 100%;
+            height: 200px; /* altura do iframe */
+            border: none;
+        }
+        .card-header {
+            padding: 10px;
+            background-color: #000000;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">Título do Card</div>
+        <iframe src="https://rd3w.com.br" scrolling="no"></iframe>
+        <!-- <iframe src="https://rd3w.com.br"></iframe> -->
+    </div>
+</body>
+</html>
