@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+      .cor1{
+        background-color: lightblue;
+      }
+      .cor2{
+        background-color: lightgreen;
+      }
+      .cor3{
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>Colgroup & col</caption>
+      <colgroup>
+        <col class="cor1">
+        <col span="2" class="cor2">
+        <col>
+        <col class="cor3">
+      </colgroup>
+      <thead>
+        <tr>
+          <td>Coluna 01</td>
+          <td>Coluna 02</td>
+          <td>Coluna 03</td>
+          <td>Coluna 04</td>
+          <td>Coluna 05</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Linha 01 - Coluna 01</td>
+          <td>Linha 01 - Coluna 02</td>
+          <td>Linha 01 - Coluna 03</td>
+          <td>Linha 01 - Coluna 04</td>
+          <td>Linha 01 - Coluna 05</td>
+        </tr>
+        <tr>
+          <td>Linha 02 - Coluna 01</td>
+          <td>Linha 02 - Coluna 02</td>
+          <td>Linha 02 - Coluna 03</td>
+          <td>Linha 02 - Coluna 04</td>
+          <td>Linha 02 - Coluna 05</td>
+        </tr>
+        <tr>
+          <td>Linha 03 - Coluna 01</td>
+          <td>Linha 03 - Coluna 02</td>
+          <td>Linha 03 - Coluna 03</td>
+          <td>Linha 03 - Coluna 04</td>
+          <td>Linha 03 - Coluna 05</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>foot 03 - Coluna 01</td>
+          <td>foot 03 - Coluna 02</td>
+          <td>foot 03 - Coluna 03</td>
+          <td>foot 03 - Coluna 04</td>
+          <td>foot 03 - Coluna 05</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
