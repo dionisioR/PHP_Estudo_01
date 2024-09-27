@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <style>
+      p {
+        /* position: static; >>> padrão */
+      }
+      /* .posicao{
+        position:static;
+        background-color: green;
+        color: #fff;
+        padding: 5px;
+      } */
+      .posicao {
+        position: relative;
+        top: 30px;
+        left: 50px;
+        background-color: green;
+        color: #fff;
+        padding: 5px;
+      }
+
+      div{
+        width: 300px;
+        height: 100px;
+        background-color: yellow;
+        margin: 100px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, et!</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, quam.
+    </p>
+    <p class="posicao">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+      mollitia.
+    </p>
+
+    <div>
+      <p class="posicao">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+        mollitia.
+      </p>
+    </div>
+  </body>
+</html>
