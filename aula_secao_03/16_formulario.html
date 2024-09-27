@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 100px;
+      }
+      .form-container {
+        width: 60%;
+        margin: auto;
+      }
+      .form-group {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulário</h1>
+    <form
+      action="https://sys4soft.com/udemy/forms/index.php"
+      method="post"
+      class="form-container"
+    >
+      <div class="form-group">
+        <label>Selecione uma opção: </label> <br>
+        <select name="campo_selecao" id="campo_selecao" required>
+          <option value="" selected></option>
+          <option value="pt">Portugal</option>
+          <option value="br" >Brasil</option>
+          <option value="ao">Angola</option>
+          <option value="mc">Moçambique</option>
+          <option value="cv">Cabo Verde</option>
+        </select>
+      </div>
+      <hr />
+      <div class="form-group"> 
+        <label>Selecione uma opção: </label><br>
+        <select name="campo_selecao2[]" id="" required multiple>
+          <option value="" selected></option>
+          <option value="pt">Portugal</option>
+          <option value="br" >Brasil</option>
+          <option value="ao">Angola</option>
+          <option value="mc">Moçambique</option>
+          <option value="cv">Cabo Verde</option>
+        </select>
+      </div>
+      <hr />
+      <div class="form-group"> 
+        <label>Selecione uma opção: </label><br>
+        <select name="campo_selecao2[]" id="" required multiple disabled>
+          <option value="" selected></option>
+          <option value="pt">Portugal</option>
+          <option value="br" >Brasil</option>
+          <option value="ao">Angola</option>
+          <option value="mc">Moçambique</option>
+          <option value="cv">Cabo Verde</option>
+        </select>
+      </div>
+      <hr />
+      <div class="form-group"> 
+        <label>Selecione uma opção: </label><br>
+        <select name="campo_selecao2[]" id="" required multiple>
+          <optgroup label="Paises">
+            <option value="pt">Portugal</option>
+            <option value="br" >Brasil</option>
+            <option value="ao">Angola</option>
+            <option value="mc">Moçambique</option>
+            <option value="cv">Cabo Verde</option>
+          </optgroup>
+          <optgroup label="Outros países">
+            <option value="fr">França</option>
+            <option value="es">Espanha</option>
+            <option value="it">Itália</option>
+          </optgroup>
+        
+        </select>
+      </div>
+      <hr />
+      <!-- submit  -->
+      <div class="form-group">
+        <input type="submit" value="Enviar" />
+      </div>
+    </form>
+  </body>
+</html>

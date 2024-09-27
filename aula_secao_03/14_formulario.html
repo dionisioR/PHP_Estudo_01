@@ -25,14 +25,26 @@
       method="post"
       class="form-container"
     >
+
+    <!-- range -->
       <div class="form-group">
-        
+        <input type="range" name="campo_intervalo" id="" step="2" min="0" max="100" value="10" oninput="mostrar(this.value)" />
+        <p id="valor_range"></p>
       </div>
+  
+
       <hr />
       <!-- submit  -->
       <div class="form-group">
         <input type="submit" value="Enviar" />
       </div>
     </form>
+
+    <script>
+      function mostrar(valor) {
+        console.log(valor);
+        document.getElementById("valor_range").innerHTML = valor;
+      }
+    </script>
   </body>
 </html>
