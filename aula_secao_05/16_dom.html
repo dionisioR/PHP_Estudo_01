@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RD3W</title>
+    <style>
+        h1, button{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+   <h1>Texto original</h1>
+   <!--Neste exemplo somente uma ação será executada, o console.log('teste') não será executado-->
+   <button onclick="alterar_texto()" onclick="console.log('teste')">Alterar 1</button>
+   <button>Alterar 2</button>
+
+    <script>
+        function alterar_texto(){
+            document.querySelector('h1').textContent = 'Texto alterado com sucesso!';
+        }
+    </script>
+</body>
+</html>

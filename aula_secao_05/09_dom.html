@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RD3W</title>
+  </head>
+  <body>
+   
+    <p id="texto_0" class="text-center text-danger">
+      0 Lorem ipsum dolor <strong>amet consectetur adipisicing elit</strong>. Rem quisquam vel quasi! Itaque harum tenetur, soluta nemo architecto officia error ea eum doloremque dolorum dicta accusantium, cum enim debitis nostrum.
+    </p>
+    <p id="texto_1" class="text-center">
+      1 Lorem ipsum dolor <strong>amet consectetur adipisicing elit</strong>. Rem quisquam vel quasi! Itaque harum tenetur, soluta nemo architecto officia error ea eum doloremque dolorum dicta accusantium, cum enim debitis nostrum.
+    </p>
+    <p id="texto_2" class="text-center">
+      2 Lorem ipsum dolor <strong>amet consectetur adipisicing elit</strong>. Rem quisquam vel quasi! Itaque harum tenetur, soluta nemo architecto officia error ea eum doloremque dolorum dicta accusantium, cum enim debitis nostrum.
+    </p>
+    <p id="texto_3" class="text-center">
+      3 Lorem ipsum dolor <strong>amet consectetur adipisicing elit</strong>. Rem quisquam vel quasi! Itaque harum tenetur, soluta nemo architecto officia error ea eum doloremque dolorum dicta accusantium, cum enim debitis nostrum.
+    </p>
+    <input type="text" name="input_text" id="input_text_id">
+    <script>
+   
+      let e = document.getElementsByClassName('text-center')
+      console.log(e)
+      console.log('--------------')
+      console.log(e[0])
+      console.log(e[1])
+      e[2].innerText = "Estudando JS!!!"
+      console.log('--------------')
+
+      let j = document.getElementsByName('input_text')
+      console.log(j)
+      console.log(j[0])
+      j[0].placeholder = "ddd 555 "
+   
+      console.log('--------------')
+      let k = document.getElementsByTagName('p')
+      console.log(k)
+    </script>
+  </body>
+</html>

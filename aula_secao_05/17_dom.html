@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RD3W</title>
+</head>
+<body>
+    
+    <h1>
+        Texto de título desta págaina.
+    </h1>
+
+    <button id="btn">Alterar Texto</button>
+   
+    <script>
+        // neste exemplo iremos adicionar dois eventos ao clique do botão
+
+        let btn = document.querySelector('#btn')
+
+        // Podemos adicionar múltiplos event listeners ao mesmo evento 'click'
+
+        btn.addEventListener('click', function(){
+            document.querySelector('h1').textContent = 'Texto alterado com sucesso!';
+        })
+        
+
+        btn.addEventListener('click', function(){
+            console.log('Você clicou no botão!')
+        })
+        
+
+        btn.addEventListener('click', function(){
+            document.querySelector('h1').style.color = 'darkorange';
+        })
+
+    </script>
+</body>
+</html>

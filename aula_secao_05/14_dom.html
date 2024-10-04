@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RD3W</title>
+    <style>
+        body {
+            background-color: #000;
+            color:darkgoldenrod;
+            text-align: center;
+        }
+        .elemento{
+            width: 80%;
+            margin: 50px auto;
+            padding: 50px;
+            background-color: #fff;
+            font-size: 1.5em;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="elemento" id="elemento_1">
+        <h1>Título do elemento 01</h1>
+    </div>
+    
+    <div class="elemento" id="elemento_2">
+        <h1>Título do elemento 02</h1>
+    </div>
+    
+    <div class="elemento" id="elemento_3">
+        <h1>Título do elemento 03</h1>
+    </div>
+
+    <div class="elemento" id="elemento_4">
+        <h1>Título do elemento 04</h1>
+    </div>
+    
+   
+    <script>
+        // CRIAR E REMOVER ELEMENTO HTML
+        //----------------------------------------------------
+        // Podemos criar elementos com o método document.createElement()
+        // nota: estes elementos não são automaticamente adicionados ao DOM
+        //----------------------------------------------------
+
+        // criar um novo elemento
+        let novo_elemento = document.createElement('p')
+        // adicionar texto ao novo elemento
+        novo_elemento.innerText = "Texto do novo elemento"
+        // adicionar um estilo ao novo elemento
+        novo_elemento.style.color = "#fff"
+        // adiciona o elemento ao body
+        document.body.appendChild(novo_elemento)
+        //----------------------------------------------------
+
+        // Adiciona conteúdo de texto sem tag
+        let conteudo_de_texto = document.createTextNode("Este é um texto sem tag que será incorporado ao BODY....")
+        document.body.appendChild(conteudo_de_texto)
+        //----------------------------------------------------
+
+        // Adicionar o parágrafo a um dos divs
+        let div = document.querySelector('#elemento_1')
+        let paragrafo = document.createElement('p')
+        paragrafo.innerText = "Este é um texto sem tag que será incorporado em uma DIV...."
+        div.appendChild(paragrafo)
+        //----------------------------------------------------
+
+        // adicionar um parágrafo antes do elemento selecionado
+        let paragrafo_antes = document.createElement('p')
+        paragrafo_antes.innerText = "Este é um texto sem tag que será incorporado antes do elemento selecionado..."
+        div.before(paragrafo_antes)
+        //----------------------------------------------------
+
+        // adicionar um parágrafo no início do elemento selecinoado
+        let paragrafo_inicio = document.createElement('p')
+        paragrafo_inicio.innerText = "Este é um texto  incorporado no início do elemento selecionado..."
+        div.prepend(paragrafo_inicio)
+        //----------------------------------------------------
+
+        // adicionar um parágrafo no final do elemento selecionado
+        let paragrafo_final = document.createElement('p')
+        paragrafo_final.innerText = "Este é um texto  incorporado no final do elemento selecionado..."
+
+        let div2 = document.querySelector('#elemento_2')
+        div2.append(paragrafo_final)
+        //----------------------------------------------------
+
+        // adicionar um parágrafo depois do elemento selecionado
+        let paragrafo_depois = document.createElement('p')
+        paragrafo_depois.innerText = "Este é um texto  incorporado depois do elemento selecionado..."
+        div2.after(paragrafo_depois)
+
+        //----------------------------------------------------
+
+        // Outra maneira de fazer os procedimentos anteriores
+        let div4 = document.querySelector('#elemento_4')
+        let paragrafo4 = document.createElement('p')
+        paragrafo4.innerText = "Este é um texto..."
+        // div4.insertAdjacentElement('beforebegin', paragrafo4)
+        // div4.insertAdjacentElement('afterbegin',paragrafo4)
+        // div4.insertAdjacentElement('beforeend',paragrafo4)
+        div4.insertAdjacentElement('afterend',paragrafo4)
+
+        //----------------------------------------------------
+
+        // Removendo o elemento
+        div4.remove()
+    </script>
+</body>
+</html>

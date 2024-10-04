@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RD3W</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: unset;
+        background-color: #000;
+        color:#fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container{
+        margin: 50px auto;
+        width: 400px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .container-dark{
+        border: 1px solid gray;
+        background-color: rgb(50, 50, 50);
+        color:#fff;
+      }
+      .container-light{
+        border: 1px solid gray;
+        background-color: #fff;
+        color:#000;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container container-dark">
+      <h1>Título da Seção</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sed in
+        facere nesciunt deserunt sapiente beatae aliquid quis voluptate aliquam
+        maiores aperiam reprehenderit qui, praesentium ipsa. Excepturi tempore
+        velit neque.
+      </p>
+    </section>
+
+    <script>
+      // adicionando e removendo classe com js
+      let container = document.querySelector('section')
+
+      // valor das classes
+      console.log(container.className)
+
+      // altera o valor da classse
+      // container.className = "container"
+
+      // adiciona mais uma classe
+      // container.className += " container-light"
+
+      // adicionando uma única classe
+      container.classList.add('container-light')
+
+      // adicionando muitas classes
+      // container.classList.add('classe1','classe2','classe3')
+
+      // Remover uma classe
+      // container.classList.remove('container-dark')
+
+      // removendo muitas classes
+      // container.classList.remove('classe1','classe2','classe3')
+
+      // Alternar classe
+      // se existe tira, se não existe coloca
+      // container.classList.toggle('container-light')
+
+      // verifica se uma classe existe no elemento
+      if(container.classList.contains('container')){
+        console.log('Existe a classe container')
+      }else{
+        console.log('Não existe a classe container')
+      }
+
+      </script>
+  </body>
+</html>
