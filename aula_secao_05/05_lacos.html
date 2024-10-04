@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RD3W</title>
+  </head>
+  <body>
+    <script>
+      // While
+      let i = 0;
+      let aux = "";
+      while (i <= 5) {
+        aux += i + ' ';
+        i++;
+      }
+      console.log(aux);
+
+      // Do While
+      let j = 0;
+      let aux2 = "";
+      do {
+        aux2 += j + ' ';
+        j++;
+      } while (j <= 5);
+      console.log(aux2);
+
+      // For
+      let aux3 = "";
+      for (let k = 0; k <= 5; k++) {
+        aux3 += k + ' ';
+      }
+      console.log(aux3);
+
+      console.log('-------------')
+
+      let str = ["AAA", "BBB", "CCC", "DDD", "EEE"];
+      
+      // for in
+      for (let index in str) {
+        console.log(index);
+      }
+      for (let index in str) {
+        console.log(str[index]);
+      }
+      console.log('--------------')
+
+      // for of
+      for (let value of str) {
+        console.log(value);
+      }
+      console.log('--------------')
+
+      // forEach
+      str.forEach((value) => {
+        console.log(value);
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RD3W</title>
+  </head>
+  <body>
+    <script>
+      // Ordenando um array de números
+
+      let valores = [1, 30, 20, 50, 56, 45, 10, 11, 2, 111]
+      console.table(valores);
+      console.log("----------------");
+
+      // ordenar um array 
+      // modifica a estrutura do array
+      // Observe que teremos um PROBLEMA
+      valores.sort()
+      console.table(valores);
+      
+      console.log("----------------");
+      // ordenar um array em ordem ascendente
+      valores.sort((a, b) => a - b);
+      console.table(valores);
+
+      console.log("----------------");
+      // ordenar um array em ordem descendente
+      valores.sort((a, b) => b - a);
+      console.table(valores);
+
+    </script>
+  </body>
+</html>

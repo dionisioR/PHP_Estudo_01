@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RD3W</title>
+  </head>
+  <body>
+    <script>
+     let pessoa = {
+      // Propriedades
+      nome:"João",
+      sobrenome: 'Silva',
+      idade: 25,
+      sexo: "M",
+
+      // Métodos
+      apresentar_nome: function(){
+        return this.nome + ' ' + this.sobrenome
+      },
+      apresentar_idade: function(){
+        return this.idade + ' anos de idade'
+      },
+      hobbies: [
+        'Correr',
+        'Nadar',
+        'Ciclismo'
+      ]
+     }
+
+     // Observação: As chaves podem surgir com aspas também
+     console.log(pessoa.nome)
+     console.log(pessoa.sexo)
+     console.log(pessoa.apresentar_nome())
+     console.log(pessoa.apresentar_idade())
+     console.log(pessoa.hobbies)
+     console.log(pessoa.hobbies[0])
+     console.log(pessoa.hobbies[1])
+
+     console.log('--------------------')
+     // apresentar todas as propriedades do objeto
+      for (let propriedade in pessoa){
+        console.log(propriedade)
+      }
+
+     console.log('--------------------')
+     // adicionando propriedades ao objeto
+      pessoa.peso = 80
+      pessoa.email = 'j.silva@g.com'
+      pessoa.mobile = '12345678'
+      console.log(pessoa.email)
+      console.log(pessoa.mobile)
+      console.log(pessoa)
+      console.table(pessoa);
+
+     console.log('--------------------')
+      // deletar
+      delete pessoa.sexo
+      delete pessoa.apresentar_idade
+      delete pessoa.apresentar_nome
+      delete pessoa.hobbies
+      console.table(pessoa);
+    </script>
+  </body>
+</html>

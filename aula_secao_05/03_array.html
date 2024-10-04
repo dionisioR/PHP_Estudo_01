@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RD3W</title>
+  </head>
+  <body>
+    <script>
+      // Ordenando um array de strings
+
+      let nomes = ["João", "Ana", "Carlos", "Ana", "Anna", "Xavier","Catarina","Fernanda"];
+      console.table(nomes);
+      console.log("----------------");
+
+      // ordenar um array em ordem ascendente
+      // modifica a estrutura do array
+      nomes.sort();
+      console.table(nomes);
+      
+      console.log("----------------");
+      // ordenar um array em ordem descendente
+      nomes.sort()
+      nomes.reverse();
+      console.table(nomes);
+
+      console.log("----------------");
+      // sintaxe alternativa
+      nomes.sort().reverse();
+      console.table(nomes);
+    </script>
+  </body>
+</html>
