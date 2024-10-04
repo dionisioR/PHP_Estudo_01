@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RD3W</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* box-shadow: inset 0 0 2px #000; */
+      }
+
+      article {
+        padding: 40px;
+      }
+      .visivel-mobile {
+        display: block;
+      }
+      .visivel-tablet {
+        display: none;
+      }
+      .visivel-desktop {
+        display: none;
+      }
+
+      @media (min-width: 576px) {
+        .visivel-mobile {
+          display: none;
+        }
+        .visivel-tablet {
+          display: block;
+        }
+        .visivel-desktop {
+          display: none;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .visivel-mobile {
+          display: none;
+        }
+        .visivel-tablet {
+          display: none;
+        }
+        .visivel-desktop {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h3>Conteúdo diferente para cada dispositivo</h3>
+    </header>
+    <section>
+      <article class="visivel-mobile"><h1>Apenas mobile</h1></article>
+      <article class="visivel-tablet"><h1>Apenas tablet</h1></article>
+      <article class="visivel-desktop"><h1>Apenas desktop</h1></article>
+    </section>
+  </body>
+</html>

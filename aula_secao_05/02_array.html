@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RD3W</title>
+  </head>
+  <body>
+    <script>
+      let nomes = ["João", "Ana", "Carlos", "Ana"];
+      console.log(nomes);
+      console.log("----------------");
+      // extrair partes de um array (retorna um novo array - não modifica o array original)
+      let nomesExtraidos = nomes.slice(0, 2);
+      console.log(nomesExtraidos);
+      console.log(nomes);
+      console.log("----------------");
+      // juntar dois arrays
+      let outrosNomes = ["Maria", "José"];
+      nomes = nomes.concat(outrosNomes);
+      console.log(nomes);
+      console.log("----------------");
+      // procura item em um array
+      console.log(nomes.includes("Carlos")); // true
+      console.log(nomes.includes("Juca")); // false
+      console.log("----------------");
+      // procurando primeira posição de um item em um array
+      console.log(nomes.indexOf("Carlos")); // 2
+      console.log(nomes.indexOf("Juca")); // -1
+      console.log("----------------");
+      // procurando última posição de um item em um array
+      console.log(nomes.lastIndexOf("Ana")); // 3
+      console.log(nomes.lastIndexOf("Juca")); // -1
+      console.log("----------------");
+      // converter um array em uma string
+        let nomesString = nomes.join(", ");
+        console.log(nomesString)
+      console.log("----------------");
+      console.log("----------------");
+    </script>
+  </body>
+</html>

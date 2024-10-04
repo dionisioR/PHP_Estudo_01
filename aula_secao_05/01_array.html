@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RD3W</title>
+</head>
+<body>
+    
+    <script>
+        let nomes = ["AAA","BBB","CCC","DDD","EEE"]
+        console.log(nomes)
+        console.log(nomes[0])
+        console.log(nomes[1])
+        console.log(nomes[2])
+        console.table(nomes);
+        console.log('----------------')
+        nomes[0]="XXX"
+        console.table(nomes);
+        console.log('----------------')
+        // tamanho
+        console.log(nomes.length)
+        console.log('----------------')
+        // adiciona elemento no final do array
+        nomes.push("FFF")
+        console.table(nomes);
+        console.log('----------------')
+        // adiciona elemento no início do array
+        nomes.unshift("ZZZ")
+        console.table(nomes);
+        console.log('----------------')
+        // remove elemento no final do array
+        nomes.pop()
+        console.table(nomes);
+        console.log('----------------')
+        // remove elemento no início do array
+        nomes.shift()
+        console.table(nomes);
+        console.log('----------------')
+    </script>
+</body>
+</html>
