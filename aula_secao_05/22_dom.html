@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RD3W</title>
+    <style>
+        body{
+            background-color: #000;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .caixa{
+            width: 300px;
+            height: 20px;
+            margin: 10px auto;
+            box-shadow: 0 0 2px #ccc;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn_vermelho">Vermelho</button>
+    <button id="btn_verde">Verde</button>
+    <button id="btn_azul">Azul</button>
+   
+    <script>
+        /*
+        Objetivo:
+        Apresentar 25 caixa em stack vertica
+        com gradação de cores vermelho, verde ou azul
+        com variações do valor rgb em 10 pontos
+        */
+
+      
+        document.querySelectorAll('button').forEach(
+            (button) =>{
+                button.addEventListener('click', (event) => {
+                    deletar_elementos()
+                 
+                    for(let i = 0; i <= 250; i+=10){
+                        let caixa = document.createElement('div')
+                        caixa.classList.add('caixa')
+                        let id = event.target.id
+                        if(id === 'btn_vermelho'){
+                            caixa.style.backgroundColor = `rgb(${i}, 0, 0)`
+                            caixa.textContent = `rgb(${i}, 0, 0)`
+                        }else if(id === 'btn_verde'){
+                            caixa.style.backgroundColor = `rgb(0, ${i}, 0)`
+                            caixa.textContent = `rgb(0, ${i}, 0)`
+                        }else{
+                            caixa.style.backgroundColor = `rgb(0, 0, ${i})`
+                            caixa.textContent = `rgb(0, 0, ${i})`
+                        }
+                        caixa.style.color = '#fff'
+                        document.body.appendChild(caixa)
+                    }
+
+                })
+            }
+        )
+        
+        function deletar_elementos(){
+            document.querySelectorAll('.caixa').forEach(
+                (caixa) => {
+                    caixa.remove()
+                }
+            )
+        }
+    </script>
+</body>
+</html>

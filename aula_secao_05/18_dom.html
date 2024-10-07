@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RD3W</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        .caixa{
+            border: 1px solid gray;
+            background-color: lightgray;
+            color:#000;
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .cor-fundo-caixa{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    
+   
+    <div class="caixa">
+        <h1>Título</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat perferendis dolorum minima itaque voluptatem voluptates. Consectetur perferendis ipsum nam culpa recusandae voluptate aut, ad reprehenderit, saepe, optio rerum voluptatum libero?
+        </p>
+    </div>
+
+    <button>Executar</button>
+
+    <script>
+        /*
+        Objetivo:
+        Ao clicar no botão, alterar a cor de fundo da caixa para aquamarine
+        apresentar o texto "Clique" no console e 
+        remover o evento do botão.
+        */
+
+        let caixa = document.querySelector('.caixa')
+        let btn = document.querySelector('button')
+        
+        function executar(){
+            caixa.classList.add('cor-fundo-caixa')
+            console.log('Clique')
+            btn.removeEventListener('click', executar)
+
+        }
+        btn.addEventListener('click', executar)
+    </script>
+</body>
+</html>
