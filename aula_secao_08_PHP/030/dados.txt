@@ -1,0 +1,8 @@
+Um texto em um arquivo txt. Linha 01!!!
+Um texto em um arquivo txt. Linha 02!!!
+Um texto em um arquivo txt. Linha 03!!!
+Um texto em um arquivo txt. Linha 04!!!
+Um texto em um arquivo txt. Linha 05!!!
+Um texto em um arquivo txt. Linha 06!!!
+Um texto em um arquivo txt. Linha 07!!!
+Um texto em um arquivo txt. Linha 08!!!
