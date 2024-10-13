@@ -26,5 +26,6 @@ Outra nota: Existem determinados caracteres que entram em conflito com uma query
 Por exemplo o &, o espaço, o < e > 
 Para evitar problemas, usa a função urlencode
 
+
 */
 
