@@ -1,5 +1,10 @@
+<?php
+session_start();
+$erro = !empty($_SESSION['erro']) ? $_SESSION['erro'] : '';
+unset($_SESSION['erro']);
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -31,6 +36,12 @@
             <input type="submit" value="Executar">
         </form>
     </div>
+
+    <?php if (!empty($erro)) : ?>
+        <div class="wrapper">
+            <p style="color: red;"><?= $erro ?></p>
+        </div>
+    <?php endif; ?>
 
 </body>
 
