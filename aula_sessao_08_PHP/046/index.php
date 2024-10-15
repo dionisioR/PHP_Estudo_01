@@ -1,6 +1,13 @@
 <?php
 
 // criar a função aqui ...
+function dividir($a, $b){
+    try{
+        return $a / $b;
+    }catch(Throwable $th){
+        return null;
+    }
+}
 
 ?>
 
@@ -21,9 +28,14 @@
         <?php 
             $valor1 = rand(0,10);
             $valor2 = rand(0,10);
+            $resultado = dividir($valor1, $valor2);
         ?>
 
         <!-- apresentar os valores aqui -->
+        <p>
+            <?php echo $valor1; ?> / <?php echo $valor2; ?> = 
+            <?php echo $resultado === null ? 'Erro ao dividir por zero' : $resultado; ?>
+        </p>
 
     <?php endfor; ?>
 
