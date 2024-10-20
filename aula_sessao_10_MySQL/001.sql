@@ -47,7 +47,9 @@ select amigos.nome, telefones.numero from amigos, telefones where amigos.id = te
 select amigos.nome, telefones.numero from amigos, telefones where amigos.id = telefones.id_amigo and amigos.nome = 'sofia';
 select amigos.nome as 'Proprietário', telefones.numero as 'Número' from amigos, telefones where amigos.id = telefones.id_amigo and amigos.nome = 'sofia';
 
-
+select * from telefones where numero like '1%';
+select * from telefones where numero like '%1';
+select * from telefones where numero like '%1%';
 
 
 
