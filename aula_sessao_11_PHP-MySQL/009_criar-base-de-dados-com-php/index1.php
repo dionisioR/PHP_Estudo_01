@@ -5,7 +5,7 @@ $username = 'root';
 $password = '';
 
 // conexão
-$conexao = new PDO("mysql:host=localhost",$database,$password);
+$conexao = new PDO("mysql:host=localhost",$username,$password);
 
 // drop a base de dados caso ela exista
 $sql = "DROP DATABASE IF EXISTS $database";
