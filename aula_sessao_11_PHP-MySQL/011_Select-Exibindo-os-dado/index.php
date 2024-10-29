@@ -1,27 +1,31 @@
-<?php 
-    // importar a classe Database e configurações
-    use RD3W\Database;
-    require_once("./Database.php");
+<?php
+// importar a classe Database e configurações
+use RD3W\Database;
 
-    // configurações
-    $config = [
-        "host" => "localhost",
-        "database" => "base_teste",
-        "username" => "root",
-        "password" => "",
-    ];
+require_once("./Database.php");
 
-    // instanciar a classe Database
-    $database = new Database($config);
+// configurações
+$config = [
+    "host" => "localhost",
+    "database" => "base_teste",
+    "username" => "root",
+    "password" => "",
+];
 
-    // resultados
-    $sql = "SELECT * FROM clientes";
-    $results = $database->execute_query($sql);
+// instanciar a classe Database
+$database = new Database($config);
 
-    // ver os dados
-    echo "<pre>";
-    print_r($results);
-    echo "</pre>";
+// resultados
+$sql = "SELECT * FROM clientes";
+$resultados = $database->execute_query($sql);
+
+// ver os dados
+// echo "<pre>";
+// print_r($resultados);
+// echo "</pre>";
+
+// results é o índice do array associativo gerado pela consulta do PDO
+$resultados = $resultados->results;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -37,8 +41,39 @@
     <header class="m-5 p-5 text-center">
         <h1 class="display-3">Dados dos clientes</h1>
     </header>
-    <main class="py-5">
-        
+    <main class="py-5 container">
+
+        <!-- Apresentação dos dados -->
+        <?php
+
+        if (count($resultados) == 0) {
+            echo "<p class='alert alert-danger'>Não foram encontrados registros</p>";
+        } else {
+            echo "<table class='table table-striped'>";
+            echo "<thead>";
+            echo "<tr>";
+            echo "<th>Nome</th>";
+            echo "<th>Email</th>";
+            echo "<th>Data de cadastro</th>";
+            echo "</tr>";
+            echo "</thead>";
+            echo "<tbody>";
+            foreach ($resultados as $cliente) {
+                echo "<tr>";
+                echo "<td>{$cliente->nome}</td>";
+                echo "<td>{$cliente->email}</td>";
+                echo "<td>{$cliente->created_at}</td>";
+                echo "</tr>";
+            }
+            echo "</tbody>";
+            echo "</table>";
+        }
+
+        ?>
+        <div class='alert alert-primary'>
+            <p><strong>Quantidade de registros: </strong> <?= count($resultados) ?> registros. </p>
+        </div>";
+
     </main>
 
 
