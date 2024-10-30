@@ -16,7 +16,7 @@ $database = new Database(MYSQL_CONFIG);
 
 
 // Verifica se existe um pesquisa [POST]
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // pesquisa por resultados
     $search = $_POST['text_search'];
     $params = [
@@ -25,11 +25,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $sql = "SELECT * FROM contactos WHERE nome LIKE :search or telefone LIKE :search ORDER BY id DESC";
     $results = $database->execute_query($sql, $params);
-}else{
+} else {
     // pesquisa por todos os resultados
     $sql = "SELECT * FROM contactos ORDER BY id DESC";
-    $results = $database->execute_query($sql, $params);
+    $results = $database->execute_query($sql);
 }
+
+// echo "<pre>";
+// print_r($results);
+// echo "</pre>";
+// O primeiro $results é o array (variável) de resultados
+// O segundo $results é o index do array de resultados. [results] => Array(***)
+$contacts = $results->results;
+$total_contacts = $results->affected_rows;
 ?>
 
 <!-- search & add new -->
@@ -56,34 +64,44 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="col">
 
         <!-- no results -->
-        <p class="text-center opacity-75 mt-3">Não foram encontrados contactos registados.</p>
+        <?php if ($total_contacts == 0): ?>
+            <p class="text-center opacity-75 mt-3">Não foram encontrados contactos registados.</p>
+        <?php else: ?>
 
-        <!-- widh results -->
-        <table class="table table-sm table-striped table-bordered">
-            <thead class="bg-dark text-white">
-                <tr>
-                    <th width="40%">Nome</th>
-                    <th width="30%">Telefone</th>
-                    <th width="15%" class="text-center">Editar</th>
-                    <th width="15%" class="text-center">Eliminar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>[nome]</td>
-                    <td>[telefone]</td>
-                    <td class="text-center"><a href="editar_contacto.php"><i class="bi bi-pencil-square text-primary"></i></a></td>
-                    <td class="text-center"><a href="eliminar_contacto.php"><i class="bi bi-trash3-fill text-danger"></i></a></td>
-                </tr>
-            </tbody>
-        </table>
 
-        <!-- total results & delete all-->
-        <div class="row">
-            <div class="col">
-                <p>Total: <strong>0</strong></p>
+            <!-- widh results -->
+            <table class="table table-sm table-striped table-bordered">
+                <thead class="bg-dark text-white">
+                    <tr>
+                        <th width="40%">Nome</th>
+                        <th width="30%">Telefone</th>
+                        <th width="15%" class="text-center">Editar</th>
+                        <th width="15%" class="text-center">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <?php foreach ($contacts as $contact): ?>
+                        <tr>
+                            <td><?= $contact->nome ?></td>
+                            <td><?= $contact->telefone ?></td>
+                            <td class="text-center"><a href="editar_contacto.php?id=<?= $contact->id ?>"><i class="bi bi-pencil-square text-primary"></i></a></td>
+                            <td class="text-center"><a href="eliminar_contacto.php?id=<?= $contact->id ?>"><i class="bi bi-trash3-fill text-danger"></i></a></td>
+                        </tr>
+                    <?php endforeach; ?>
+
+                </tbody>
+            </table>
+
+            <!-- total results-->
+            <div class="row">
+                <div class="col">
+                    <p>Total de registros encontrados: <strong><?= $total_contacts ?></strong></p>
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
+
+
 
     </div>
 </div>

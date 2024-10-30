@@ -1,5 +1,44 @@
 <?php
+use RD3W\Database;
 require_once('header.php');
+require_once('./config.php');
+require_once("./libraries/Database.php");
+
+$erro = null;
+
+// check if there was a post
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $database = new Database(MYSQL_CONFIG);
+
+    // get post data
+    $nome = $_POST['text_nome'];
+    $telefone = $_POST['text_telefone'];
+
+    // check if the phone already exists
+    $params = [
+        ":telefone" => $telefone
+    ];
+    $sql = "SELECT id FROM contactos WHERE telefone = :telefone";
+    $results = $database->execute_query($sql, $params);
+
+    if($results->affected_rows != 0){
+        // Já existe um registro com este telefone
+        $erro = "Já existe um contacto com este número de telefone.";
+    }else{
+        // insert new contact 
+        $params = [
+            ":nome" => $nome,
+            ":telefone" => $telefone
+        ];
+
+        // $sql = "INSERT INTO contactos (nome, telefone) VALUES (:nome, :telefone, now(), now())";
+        $sql = "INSERT INTO contactos VALUES (0, :nome, :telefone, now(), now())";
+        $results = $database->execute_non_query($sql, $params);
+
+        header("Location: index.php");
+    }
+}
+
 ?>
 
 <div class="row justify-content-center">
