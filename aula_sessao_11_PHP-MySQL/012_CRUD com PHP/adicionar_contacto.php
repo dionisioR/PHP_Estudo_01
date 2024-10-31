@@ -1,5 +1,7 @@
 <?php
+
 use RD3W\Database;
+
 require_once('header.php');
 require_once('./config.php');
 require_once("./libraries/Database.php");
@@ -7,7 +9,7 @@ require_once("./libraries/Database.php");
 $erro = null;
 
 // check if there was a post
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $database = new Database(MYSQL_CONFIG);
 
     // get post data
@@ -21,10 +23,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $sql = "SELECT id FROM contactos WHERE telefone = :telefone";
     $results = $database->execute_query($sql, $params);
 
-    if($results->affected_rows != 0){
+    if ($results->affected_rows != 0) {
         // Já existe um registro com este telefone
         $erro = "Já existe um contacto com este número de telefone.";
-    }else{
+    } else {
         // insert new contact 
         $params = [
             ":nome" => $nome,
@@ -65,10 +67,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
 
         <!-- error message -->
-        <div class="mt-3 alert alert-danger p-2 text-center">
-            mensagem de erro aqui...
-        </div>
-
+        <?php if (!empty($erro)): ?>
+            <div class="mt-3 alert alert-danger p-2 text-center">
+                <?php echo $erro; ?>
+            </div>
+        <?php endif; ?>
     </div>
 </div>
 
