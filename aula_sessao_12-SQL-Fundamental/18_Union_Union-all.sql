@@ -14,3 +14,21 @@ select produto from produtos;
 select 'colaboradores' as 'contexto', id, nome as 'valor' from colaboradores
 union
 select 'produtos' as 'contexto', id, produto as 'valor' from produtos;
+
+-- quero obter os totais de clientes, colaboradores, produtos e encomendas registradas
+
+select 'clientes' as 'contexto', count(*) as 'total' from clientes
+union
+select 'colaboradores' as 'contexto', count(*) as 'total' from colaboradores
+union
+select 'produtos' as 'contexto', count(*) as 'total' from encomendas;
+
+-- UNION - remove os valores duplicados
+select nome from colaboradores
+union
+select nome from colaboradores;
+
+-- UNION ALL - não remove os valores duplicados
+select nome from colaboradores
+union all
+select nome from colaboradores;
