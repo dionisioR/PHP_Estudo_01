@@ -1,4 +1,5 @@
 -- DELETE
+-- deleta o registro mas mantém o valor de AUTO INCREMENT 
 -- esta operação é irreversível
 -- Sintaxe:
 -- Delete from tabela where condicao
