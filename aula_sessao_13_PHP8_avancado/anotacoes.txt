@@ -1,0 +1,17 @@
+Como instalar o COMPOSER
+=====================================
+https://getcomposer.org/
+
+- Para verificar se o composer está instalado em seu pc abra o terminal e digite 'composer'
+
+Neste exercício tenho instalado em meu pc
+- PHP 8.1.10
+- MySQL 8.1.10
+- Composer 2.5.8
+
+=====================================
+Instalado o composer
+=====================================
+- Acesse: https://getcomposer.org/download/
+- Baixe o arquivo Composer-Setup.exe
+- Execute o arquivo baixado
