@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataTables</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/datatables.min.css">
+    <script src="assets/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+    <script src="assets/datatables.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Exemplo com toda a implementação -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <h3>Exemplo de utilização do DataTables.net</h3>
+                <hr>
+                <table id="tabela" class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ana Ferreira</td>
+                            <td>ana@gmail.com</td>
+                            <td>222333444</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos Miguel</td>
+                            <td>carlos@gmail.com</td>
+                            <td>444555666</td>
+                        </tr>
+                        <tr>
+                            <td>Alexandre Castro</td>
+                            <td>alex@gmail.com</td>
+                            <td>888999000</td>
+                        </tr>
+                        <tr>
+                            <td>Francisco Daniel</td>
+                            <td>fdaniel@hotmail.com</td>
+                            <td>432543654</td>
+                        </tr>
+                        <tr>
+                            <td>Carla Martins</td>
+                            <td>cmartins@gmail.com</td>
+                            <td>123234345</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#tabela').DataTable();
+        });
+    </script>
+
+</body>
+
+</html>

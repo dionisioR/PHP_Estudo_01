@@ -1,3 +1,11 @@
+Extensões VS Code
+=====================================
+- Fold/Unfold all icone
+- PHP intelephense (Bem Mewburn)
+- Random String Gererator (bibhasdn)
+
+
+=====================================
 Como instalar o COMPOSER
 =====================================
 https://getcomposer.org/
@@ -15,3 +23,76 @@ Instalado o composer
 - Acesse: https://getcomposer.org/download/
 - Baixe o arquivo Composer-Setup.exe
 - Execute o arquivo baixado
+-- Path do PHP com XAMPP
+--- c:\xampp\php\php.exe
+
+=====================================
+- Abra o terminal
+- Na raiz do projeto (em nosso exemplo pasta www) digite 'composer init'
+=====================================
+PS C:\xampp\htdocs\PHP_Estudo_01\aula_sessao_13_PHP8_avancado\www> composer init
+
+
+  Welcome to the Composer config generator
+
+
+
+This command will guide you through creating your composer.json config.
+
+Package name (<vendor>/<name>) [micro/www]: rd3w/bng
+Description []: estudo com php - Agenda
+Author [dionisioR <72356766+dionisioR@users.noreply.github.com>, n to skip]: rd3w
+Minimum Stability []:
+Package Type (e.g. library, project, metapackage, composer-plugin) []:
+License []:
+
+Define your dependencies.
+
+Would you like to define your dependencies (require) interactively [yes]?
+Search for a package:
+Would you like to define your dev dependencies (require-dev) interactively [yes]?
+Search for a package:
+Add PSR-4 autoload mapping? Maps namespace "Rd3w\Bng" to the entered relative path. [src/, n to skip]: n
+
+{
+    "name": "rd3w/bng",
+    "description": "estudo com php - Agenda",
+    "authors": [
+        {
+            "name": "rd3w"
+        }
+    ],
+    "require": {}
+}
+
+Do you confirm generation [yes]? yes
+
+>>>> Será criado um arquivo 'composer.json'
+
+=====================================
+Criando o autoload
+=====================================
+- Faça as auterações no arquivo 'composer.php'
+
+{
+    "name": "rd3w/bng",
+    "description": "estudo com php - Agenda",
+    "authors": [
+        {
+            "name": "rd3w"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "bng\\Controllers\\": ["app/Controllers"]
+        },
+        "files": [
+            "app/config.php"
+        ]
+    }
+}
+
+- no terminal digite 'composer dump-autoload -o
+-- isso fará com que todo o projeto seja rederizado e a pasta 'vendor' será criada com os arquivos de autoload.
+-- Não devemos mexer nesta pasta / arquivos.

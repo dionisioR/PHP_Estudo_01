@@ -1,0 +1,22 @@
+{
+    "name": "sys4soft/php_framework",
+    "description": "SYS4SOFT PHP framework",
+    "type": "framework",
+    "authors": [
+        {
+            "name": "Joao Ribeiro",
+            "email": "joaoribeiro@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Controllers\\":["app/controllers"],
+            "Models\\":["app/models"],
+            "System\\":["app/system"]
+        },
+        "files":[
+            "app/config.php",
+            "app/helpers/functions.php"
+        ]
+    }
+}

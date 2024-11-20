@@ -1,0 +1,6 @@
+[2022-11-13T16:05:09.839485+00:00] registo_logs.INFO: Foi visitada a página inicial. [] []
+[2022-11-13T16:05:51.294674+00:00] registo_logs.INFO: Foi visitada a página um. [] []
+[2022-11-13T16:05:52.068592+00:00] registo_logs.INFO: Foi visitada a página dois. [] []
+[2022-11-13T16:05:52.565886+00:00] registo_logs.INFO: Foi visitada a página três. [] []
+[2022-11-13T16:06:39.517052+00:00] registo_logs.INFO: Foi visitada a página um. [] []
+[2022-11-13T16:06:40.421276+00:00] registo_logs.ERROR: Foi visitada a página três. [] []

@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataTables</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/datatables.min.css">
+    <script src="assets/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+    <script src="assets/datatables.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Exemplo com toda a implementação -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <h3>Exemplo de utilização do DataTables.net</h3>
+                <hr>
+                <table id="tabela" class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Francisca Gabriela Fernandes Ferreira</td>
+                            <td>francisca.422.gabriela@gmail.com</td>
+                            <td>924040453</td>
+                        </tr>
+                        <tr>
+                            <td>Beatriz Alexandra Ribeiro Cunha</td>
+                            <td>beatriz.426.alexandra@outlook.com</td>
+                            <td>977342153</td>
+                        </tr>
+                        <tr>
+                            <td>Filipe Leandro Lima Gonçalves</td>
+                            <td>filipe.855.leandro@outlook.com</td>
+                            <td>982858385</td>
+                        </tr>
+                        <tr>
+                            <td>Inês Teresa Barros Castro</td>
+                            <td>in.701.teresa@hotmail.com</td>
+                            <td>998359433</td>
+                        </tr>
+                        <tr>
+                            <td>Rosa Laura Araújo Matos</td>
+                            <td>rosa.132.laura@gmail.com</td>
+                            <td>947595041</td>
+                        </tr>
+                        <tr>
+                            <td>Gabriel Rafael Matos Neves</td>
+                            <td>gabriel.822.rafael@microsoft.com</td>
+                            <td>933172351</td>
+                        </tr>
+                        <tr>
+                            <td>Luís Rúben Araújo Silva</td>
+                            <td>lu.353.ren@outlook.com</td>
+                            <td>905824896</td>
+                        </tr>
+                        <tr>
+                            <td>Luciana Rita Costa Faria</td>
+                            <td>luciana.998.rita@hotmail.com</td>
+                            <td>901094336</td>
+                        </tr>
+                        <tr>
+                            <td>Miguel Lourenço Guerreiro Ribeiro</td>
+                            <td>miguel.93.louren@hotmail.com</td>
+                            <td>980424744</td>
+                        </tr>
+                        <tr>
+                            <td>Hugo Matias Soares Faria</td>
+                            <td>hugo.87.matias@outlook.com</td>
+                            <td>994322040</td>
+                        </tr>
+                        <tr>
+                            <td>Sara Rosa Henriques Sousa</td>
+                            <td>sara.358.rosa@outlook.com</td>
+                            <td>960455241</td>
+                        </tr>
+                        <tr>
+                            <td>Guilherme Nuno Cruz Vieira</td>
+                            <td>guilherme.871.nuno@outlook.com</td>
+                            <td>908501005</td>
+                        </tr>
+                        <tr>
+                            <td>Santiago Leonardo Costa Rodrigues</td>
+                            <td>santiago.296.leonardo@hotmail.com</td>
+                            <td>927086814</td>
+                        </tr>
+                        <tr>
+                            <td>Mariana Gabriela Soares Figueiredo</td>
+                            <td>mariana.257.gabriela@microsoft.com</td>
+                            <td>947070644</td>
+                        </tr>
+                        <tr>
+                            <td>André Matias Simões Rodrigues</td>
+                            <td>andr.670.matias@hotmail.com</td>
+                            <td>951442612</td>
+                        </tr>
+                        <tr>
+                            <td>Margarida Sara Mendes Cruz</td>
+                            <td>margarida.694.sara@hotmail.com</td>
+                            <td>934370623</td>
+                        </tr>
+                        <tr>
+                            <td>Samuel Pedro Vieira Jesus</td>
+                            <td>samuel.373.pedro@hotmail.com</td>
+                            <td>927395540</td>
+                        </tr>
+                        <tr>
+                            <td>Alexandra Aurora Rodrigues Pinto</td>
+                            <td>alexandra.492.aurora@microsoft.com</td>
+                            <td>900663309</td>
+                        </tr>
+                        <tr>
+                            <td>Daniela Carolina Henriques Lourenço</td>
+                            <td>daniela.106.carolina@microsoft.com</td>
+                            <td>917509782</td>
+                        </tr>
+                        <tr>
+                            <td>Laura Teresa Miranda Neves</td>
+                            <td>laura.643.teresa@gmail.com</td>
+                            <td>939315214</td>
+                        </tr>
+                        <tr>
+                            <td>Rafael Rúben Batista Sousa</td>
+                            <td>rafael.70.ren@outlook.com</td>
+                            <td>965196895</td>
+                        </tr>
+                        <tr>
+                            <td>Filipe Dinis Raposo Carvalho</td>
+                            <td>filipe.332.dinis@hotmail.com</td>
+                            <td>993683378</td>
+                        </tr>
+                        <tr>
+                            <td>Lara Amélia Machado Neves</td>
+                            <td>lara.374.amia@hotmail.com</td>
+                            <td>918241566</td>
+                        </tr>
+                        <tr>
+                            <td>Catarina Emília Silva Carvalho</td>
+                            <td>catarina.853.emia@gmail.com</td>
+                            <td>970959654</td>
+                        </tr>
+                        <tr>
+                            <td>Amélia Inês Alves Matos</td>
+                            <td>amia.259.in@outlook.com</td>
+                            <td>920690035</td>
+                        </tr>
+                        <tr>
+                            <td>Duarte João Lourenço Soares</td>
+                            <td>duarte.41.jo@hotmail.com</td>
+                            <td>940083219</td>
+                        </tr>
+                        <tr>
+                            <td>Salvador Manuel Gomes Alves</td>
+                            <td>salvador.987.manuel@gmail.com</td>
+                            <td>962809112</td>
+                        </tr>
+                        <tr>
+                            <td>Francisco Gonçalo Tavares Nunes</td>
+                            <td>francisco.571.gonlo@outlook.com</td>
+                            <td>901886864</td>
+                        </tr>
+                        <tr>
+                            <td>Matilde Maria Ramos Lourenço</td>
+                            <td>matilde.648.maria@gmail.com</td>
+                            <td>966447601</td>
+                        </tr>
+                        <tr>
+                            <td>Lara Rosa Rodrigues Alves</td>
+                            <td>lara.800.rosa@gmail.com</td>
+                            <td>928453471</td>
+                        </tr>
+                        <tr>
+                            <td>Filipe Vicente Lourenço Antunes</td>
+                            <td>filipe.853.vicente@gmail.com</td>
+                            <td>960877479</td>
+                        </tr>
+                        <tr>
+                            <td>João Vicente Guerreiro Nunes</td>
+                            <td>jo.416.vicente@gmail.com</td>
+                            <td>993471049</td>
+                        </tr>
+                        <tr>
+                            <td>Joana Diana Pereira Pinto</td>
+                            <td>joana.336.diana@gmail.com</td>
+                            <td>986582152</td>
+                        </tr>
+                        <tr>
+                            <td>Raquel Beatriz Ferreira Lopes</td>
+                            <td>raquel.909.beatriz@gmail.com</td>
+                            <td>984157020</td>
+                        </tr>
+                        <tr>
+                            <td>Rui Matias Freitas Sousa</td>
+                            <td>rui.41.matias@gmail.com</td>
+                            <td>919357498</td>
+                        </tr>
+                        <tr>
+                            <td>Diana Débora Machado Araújo</td>
+                            <td>diana.542.dora@microsoft.com</td>
+                            <td>941874901</td>
+                        </tr>
+                        <tr>
+                            <td>Rúben Gonçalo Faria Rodrigues</td>
+                            <td>ren.516.gonlo@microsoft.com</td>
+                            <td>967353782</td>
+                        </tr>
+                        <tr>
+                            <td>Pedro Ricardo Miranda Figueiredo</td>
+                            <td>pedro.234.ricardo@outlook.com</td>
+                            <td>902767047</td>
+                        </tr>
+                        <tr>
+                            <td>Rúben José Rodrigues Fernandes</td>
+                            <td>ren.679.jos@outlook.com</td>
+                            <td>927719104</td>
+                        </tr>
+                        <tr>
+                            <td>Rafaela Débora Rodrigues Pinheiro</td>
+                            <td>rafaela.871.dora@hotmail.com</td>
+                            <td>961539450</td>
+                        </tr>
+                        <tr>
+                            <td>Rúben Duarte Monteiro Castro</td>
+                            <td>ren.974.duarte@microsoft.com</td>
+                            <td>955578518</td>
+                        </tr>
+                        <tr>
+                            <td>Tiago Rui Monteiro Magalhães</td>
+                            <td>tiago.80.rui@gmail.com</td>
+                            <td>957894155</td>
+                        </tr>
+                        <tr>
+                            <td>Juliana Ana Alves Jesus</td>
+                            <td>juliana.135.ana@outlook.com</td>
+                            <td>902392616</td>
+                        </tr>
+                        <tr>
+                            <td>Gonçalo José Pinto Barros</td>
+                            <td>gonlo.389.jos@microsoft.com</td>
+                            <td>987311295</td>
+                        </tr>
+                        <tr>
+                            <td>Bruna Alice Henriques Barbosa</td>
+                            <td>bruna.922.alice@hotmail.com</td>
+                            <td>936124233</td>
+                        </tr>
+                        <tr>
+                            <td>Henrique Carlos Antunes Mendes</td>
+                            <td>henrique.695.carlos@hotmail.com</td>
+                            <td>919683046</td>
+                        </tr>
+                        <tr>
+                            <td>Matilde Diana Ferreira Mendes</td>
+                            <td>matilde.687.diana@outlook.com</td>
+                            <td>941242869</td>
+                        </tr>
+                        <tr>
+                            <td>Lara Teresa Pinto Fonseca</td>
+                            <td>lara.652.teresa@hotmail.com</td>
+                            <td>902263952</td>
+                        </tr>
+                        <tr>
+                            <td>Eva Joana Miranda Cunha</td>
+                            <td>eva.211.joana@outlook.com</td>
+                            <td>995446301</td>
+                        </tr>
+                        <tr>
+                            <td>Débora Clara Machado Raposo</td>
+                            <td>dora.502.clara@hotmail.com</td>
+                            <td>997852144</td>
+                        </tr>
+                        <tr>
+                            <td>Mariana Eva Ribeiro Mendes</td>
+                            <td>mariana.989.eva@microsoft.com</td>
+                            <td>915553851</td>
+                        </tr>
+                        <tr>
+                            <td>Rui António Ribeiro Rodrigues</td>
+                            <td>rui.461.antio@hotmail.com</td>
+                            <td>920206931</td>
+                        </tr>
+                        <tr>
+                            <td>Diogo Bernardo Moreira Azevedo</td>
+                            <td>diogo.830.bernardo@hotmail.com</td>
+                            <td>924650781</td>
+                        </tr>
+                        <tr>
+                            <td>Juliana Rosa Teixeira Simões</td>
+                            <td>juliana.222.rosa@outlook.com</td>
+                            <td>970656068</td>
+                        </tr>
+                        <tr>
+                            <td>João Alexandre Azevedo Raposo</td>
+                            <td>jo.581.alexandre@microsoft.com</td>
+                            <td>966667399</td>
+                        </tr>
+                        <tr>
+                            <td>Isabel Rita Lopes Jesus</td>
+                            <td>isabel.156.rita@microsoft.com</td>
+                            <td>937715963</td>
+                        </tr>
+                        <tr>
+                            <td>Nuno Dinis Rodrigues Fonseca</td>
+                            <td>nuno.947.dinis@hotmail.com</td>
+                            <td>927548382</td>
+                        </tr>
+                        <tr>
+                            <td>Lucas Lourenço Pires Coelho</td>
+                            <td>lucas.95.louren@microsoft.com</td>
+                            <td>986503565</td>
+                        </tr>
+                        <tr>
+                            <td>Martim Luís Guerreiro Figueiredo</td>
+                            <td>martim.80.lu@outlook.com</td>
+                            <td>958019836</td>
+                        </tr>
+                        <tr>
+                            <td>Sofia Clara Mendes Magalhães</td>
+                            <td>sofia.503.clara@outlook.com</td>
+                            <td>917072762</td>
+                        </tr>
+                        <tr>
+                            <td>Rodrigo Dinis Coelho Correia</td>
+                            <td>rodrigo.501.dinis@microsoft.com</td>
+                            <td>907729280</td>
+                        </tr>
+                        <tr>
+                            <td>Fabiana Eva Machado Rocha</td>
+                            <td>fabiana.55.eva@gmail.com</td>
+                            <td>902085103</td>
+                        </tr>
+                        <tr>
+                            <td>Guilherme Duarte Tavares Monteiro</td>
+                            <td>guilherme.772.duarte@outlook.com</td>
+                            <td>969135875</td>
+                        </tr>
+                        <tr>
+                            <td>Afonso Samuel Martins Barros</td>
+                            <td>afonso.217.samuel@hotmail.com</td>
+                            <td>914275606</td>
+                        </tr>
+                        <tr>
+                            <td>Sara Rafaela Magalhães Faria</td>
+                            <td>sara.114.rafaela@outlook.com</td>
+                            <td>920165287</td>
+                        </tr>
+                        <tr>
+                            <td>Eva Daniela Cardoso Cruz</td>
+                            <td>eva.774.daniela@hotmail.com</td>
+                            <td>975075189</td>
+                        </tr>
+                        <tr>
+                            <td>Filipe Mateus Cunha Jesus</td>
+                            <td>filipe.308.mateus@gmail.com</td>
+                            <td>955519569</td>
+                        </tr>
+                        <tr>
+                            <td>Matias Duarte Cruz Simões</td>
+                            <td>matias.284.duarte@outlook.com</td>
+                            <td>910871182</td>
+                        </tr>
+                        <tr>
+                            <td>Ricardo Alexandre Batista Ferreira</td>
+                            <td>ricardo.456.alexandre@outlook.com</td>
+                            <td>923521967</td>
+                        </tr>
+                        <tr>
+                            <td>Eva Alice Gonçalves Sousa</td>
+                            <td>eva.527.alice@hotmail.com</td>
+                            <td>944255303</td>
+                        </tr>
+                        <tr>
+                            <td>Vera Francisca Coelho Ferreira</td>
+                            <td>vera.842.francisca@outlook.com</td>
+                            <td>942431650</td>
+                        </tr>
+                        <tr>
+                            <td>Hugo Bruno Martins Antunes</td>
+                            <td>hugo.249.bruno@gmail.com</td>
+                            <td>986190060</td>
+                        </tr>
+                        <tr>
+                            <td>Nuno Luís marques Pinheiro</td>
+                            <td>nuno.492.lu@hotmail.com</td>
+                            <td>984140563</td>
+                        </tr>
+                        <tr>
+                            <td>Clara Filipa Correia Gomes</td>
+                            <td>clara.784.filipa@hotmail.com</td>
+                            <td>978949429</td>
+                        </tr>
+                        <tr>
+                            <td>Rui Tomás Simões Carvalho</td>
+                            <td>rui.664.tom@gmail.com</td>
+                            <td>936551236</td>
+                        </tr>
+                        <tr>
+                            <td>Rafael Samuel marques Antunes</td>
+                            <td>rafael.173.samuel@gmail.com</td>
+                            <td>995011556</td>
+                        </tr>
+                        <tr>
+                            <td>Miguel Lourenço Monteiro Santos</td>
+                            <td>miguel.834.louren@outlook.com</td>
+                            <td>913119993</td>
+                        </tr>
+                        <tr>
+                            <td>Hugo Rúben Pinto Monteiro</td>
+                            <td>hugo.969.ren@outlook.com</td>
+                            <td>927608758</td>
+                        </tr>
+                        <tr>
+                            <td>Clara Alice Guerreiro Figueiredo</td>
+                            <td>clara.354.alice@outlook.com</td>
+                            <td>909866154</td>
+                        </tr>
+                        <tr>
+                            <td>António Diogo Ferreira Batista</td>
+                            <td>antio.199.diogo@hotmail.com</td>
+                            <td>907087498</td>
+                        </tr>
+                        <tr>
+                            <td>Júlia Adriana Barros Soares</td>
+                            <td>jia.519.adriana@hotmail.com</td>
+                            <td>975387260</td>
+                        </tr>
+                        <tr>
+                            <td>Bernardo Guilherme Lopes Ferreira</td>
+                            <td>bernardo.881.guilherme@outlook.com</td>
+                            <td>906817797</td>
+                        </tr>
+                        <tr>
+                            <td>André Francisco Nunes Mendes</td>
+                            <td>andr.993.francisco@gmail.com</td>
+                            <td>923688833</td>
+                        </tr>
+                        <tr>
+                            <td>Raquel Juliana Ribeiro Santos</td>
+                            <td>raquel.253.juliana@microsoft.com</td>
+                            <td>904723613</td>
+                        </tr>
+                        <tr>
+                            <td>Tiago Lucas Pinheiro Simões</td>
+                            <td>tiago.472.lucas@hotmail.com</td>
+                            <td>980943699</td>
+                        </tr>
+                        <tr>
+                            <td>Duarte Luís Magalhães Ferreira</td>
+                            <td>duarte.456.lu@gmail.com</td>
+                            <td>907892286</td>
+                        </tr>
+                        <tr>
+                            <td>Pedro Alexandre Pereira Ribeiro</td>
+                            <td>pedro.637.alexandre@outlook.com</td>
+                            <td>909772960</td>
+                        </tr>
+                        <tr>
+                            <td>Marta Luísa Cunha Raposo</td>
+                            <td>marta.36.lua@gmail.com</td>
+                            <td>967864359</td>
+                        </tr>
+                        <tr>
+                            <td>Gustavo André Rocha Raposo</td>
+                            <td>gustavo.556.andr@gmail.com</td>
+                            <td>992371219</td>
+                        </tr>
+                        <tr>
+                            <td>Eduardo Lourenço Correia Oliveira</td>
+                            <td>eduardo.753.louren@hotmail.com</td>
+                            <td>950880410</td>
+                        </tr>
+                        <tr>
+                            <td>Guilherme Francisco Magalhães Ferreira</td>
+                            <td>guilherme.219.francisco@microsoft.com</td>
+                            <td>992106192</td>
+                        </tr>
+                        <tr>
+                            <td>Diego Rúben Costa Gonçalves</td>
+                            <td>diego.217.ren@hotmail.com</td>
+                            <td>936730770</td>
+                        </tr>
+                        <tr>
+                            <td>Luciana Elisa Jesus Neves</td>
+                            <td>luciana.365.elisa@outlook.com</td>
+                            <td>945082061</td>
+                        </tr>
+                        <tr>
+                            <td>Leandro Guilherme Cardoso Martins</td>
+                            <td>leandro.751.guilherme@hotmail.com</td>
+                            <td>980053178</td>
+                        </tr>
+                        <tr>
+                            <td>Gonçalo António Oliveira Faria</td>
+                            <td>gonlo.170.antio@microsoft.com</td>
+                            <td>940374168</td>
+                        </tr>
+                        <tr>
+                            <td>Luís Santiago Correia Ramos</td>
+                            <td>lu.147.santiago@microsoft.com</td>
+                            <td>906077294</td>
+                        </tr>
+                        <tr>
+                            <td>Rosa Lara Simões Almeida</td>
+                            <td>rosa.520.lara@outlook.com</td>
+                            <td>937685360</td>
+                        </tr>
+                        <tr>
+                            <td>Mariana Clara Cunha marques</td>
+                            <td>mariana.485.clara@microsoft.com</td>
+                            <td>904811913</td>
+                        </tr>
+                        <tr>
+                            <td>Tiago Gabriel Coelho Lopes</td>
+                            <td>tiago.64.gabriel@hotmail.com</td>
+                            <td>935861910</td>
+                        </tr>
+                        <tr>
+                            <td>André Eduardo Gonçalves Fonseca</td>
+                            <td>andr.646.eduardo@outlook.com</td>
+                            <td>917777392</td>
+                        </tr>
+                        <tr>
+                            <td>Luís Rodrigo Cunha Alves</td>
+                            <td>lu.242.rodrigo@gmail.com</td>
+                            <td>940035131</td>
+                        </tr>
+                        <tr>
+                            <td>Matilde Fabiana Cunha Miranda</td>
+                            <td>matilde.106.fabiana@hotmail.com</td>
+                            <td>940332098</td>
+                        </tr>
+                        <tr>
+                            <td>Alexandre Salvador Pereira Barros</td>
+                            <td>alexandre.924.salvador@microsoft.com</td>
+                            <td>943863554</td>
+                        </tr>
+                        <tr>
+                            <td>Vicente Bernardo Pinto Cruz</td>
+                            <td>vicente.621.bernardo@gmail.com</td>
+                            <td>909685591</td>
+                        </tr>
+                        <tr>
+                            <td>Carolina Isabel Tavares Barbosa</td>
+                            <td>carolina.208.isabel@gmail.com</td>
+                            <td>914738591</td>
+                        </tr>
+                        <tr>
+                            <td>Elisa Débora Martins Silva</td>
+                            <td>elisa.466.dora@hotmail.com</td>
+                            <td>926536103</td>
+                        </tr>
+                        <tr>
+                            <td>Inês Ana Figueiredo Miranda</td>
+                            <td>in.316.ana@hotmail.com</td>
+                            <td>902456277</td>
+                        </tr>
+                        <tr>
+                            <td>Luísa Luciana Pinto Lourenço</td>
+                            <td>lua.934.luciana@microsoft.com</td>
+                            <td>959002839</td>
+                        </tr>
+                        <tr>
+                            <td>Elisa Luísa Cruz Moreira</td>
+                            <td>elisa.390.lua@gmail.com</td>
+                            <td>954389494</td>
+                        </tr>
+                        <tr>
+                            <td>Bernardo Luís Jesus Correia</td>
+                            <td>bernardo.867.lu@outlook.com</td>
+                            <td>975625678</td>
+                        </tr>
+                        <tr>
+                            <td>Rita Mafalda Figueiredo Machado</td>
+                            <td>rita.845.mafalda@microsoft.com</td>
+                            <td>994093970</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos Rodrigo Teixeira Barros</td>
+                            <td>carlos.793.rodrigo@hotmail.com</td>
+                            <td>925708950</td>
+                        </tr>
+                        <tr>
+                            <td>Manuel Matias Azevedo marques</td>
+                            <td>manuel.497.matias@outlook.com</td>
+                            <td>951889223</td>
+                        </tr>
+                        <tr>
+                            <td>Luís Gustavo Silva Araújo</td>
+                            <td>lu.43.gustavo@microsoft.com</td>
+                            <td>970371622</td>
+                        </tr>
+                        <tr>
+                            <td>Lucas João Barros Lourenço</td>
+                            <td>lucas.551.jo@hotmail.com</td>
+                            <td>990757243</td>
+                        </tr>
+                        <tr>
+                            <td>Juliana Mariana Tavares Moreira</td>
+                            <td>juliana.38.mariana@outlook.com</td>
+                            <td>917141331</td>
+                        </tr>
+                        <tr>
+                            <td>Diogo Daniel marques Magalhães</td>
+                            <td>diogo.145.daniel@gmail.com</td>
+                            <td>919154708</td>
+                        </tr>
+                        <tr>
+                            <td>Elisa Carolina Pires Teixeira</td>
+                            <td>elisa.237.carolina@hotmail.com</td>
+                            <td>905458874</td>
+                        </tr>
+                        <tr>
+                            <td>Bernardo João Faria Miranda</td>
+                            <td>bernardo.125.jo@gmail.com</td>
+                            <td>984775438</td>
+                        </tr>
+                        <tr>
+                            <td>Leandro António Barros Machado</td>
+                            <td>leandro.591.antio@outlook.com</td>
+                            <td>944691601</td>
+                        </tr>
+                        <tr>
+                            <td>Gabriel João Magalhães Raposo</td>
+                            <td>gabriel.402.jo@gmail.com</td>
+                            <td>921742859</td>
+                        </tr>
+                        <tr>
+                            <td>Catarina Elisa Silva Matos</td>
+                            <td>catarina.521.elisa@microsoft.com</td>
+                            <td>938784350</td>
+                        </tr>
+                        <tr>
+                            <td>Gabriela Sofia Lopes Ramos</td>
+                            <td>gabriela.218.sofia@gmail.com</td>
+                            <td>998663557</td>
+                        </tr>
+                        <tr>
+                            <td>André Carlos Rodrigues Vieira</td>
+                            <td>andr.722.carlos@microsoft.com</td>
+                            <td>989374763</td>
+                        </tr>
+                        <tr>
+                            <td>Matias Bernardo Henriques Costa</td>
+                            <td>matias.637.bernardo@hotmail.com</td>
+                            <td>962705166</td>
+                        </tr>
+                        <tr>
+                            <td>Rosa Elisa Alves Martins</td>
+                            <td>rosa.871.elisa@microsoft.com</td>
+                            <td>929305593</td>
+                        </tr>
+                        <tr>
+                            <td>Rui Gustavo Oliveira Soares</td>
+                            <td>rui.154.gustavo@microsoft.com</td>
+                            <td>938916158</td>
+                        </tr>
+                        <tr>
+                            <td>Mariana Francisca Simões Faria</td>
+                            <td>mariana.203.francisca@gmail.com</td>
+                            <td>927642206</td>
+                        </tr>
+                        <tr>
+                            <td>Marta Isabel Azevedo Teixeira</td>
+                            <td>marta.432.isabel@hotmail.com</td>
+                            <td>949816975</td>
+                        </tr>
+                        <tr>
+                            <td>Lucas Bernardo Castro Rodrigues</td>
+                            <td>lucas.19.bernardo@outlook.com</td>
+                            <td>978074473</td>
+                        </tr>
+                        <tr>
+                            <td>Teresa Vera Guerreiro Azevedo</td>
+                            <td>teresa.461.vera@hotmail.com</td>
+                            <td>957568645</td>
+                        </tr>
+                        <tr>
+                            <td>Adriana Júlia Teixeira Araújo</td>
+                            <td>adriana.126.jia@gmail.com</td>
+                            <td>949159609</td>
+                        </tr>
+                        <tr>
+                            <td>Bernardo Duarte Batista Sousa</td>
+                            <td>bernardo.225.duarte@microsoft.com</td>
+                            <td>937955485</td>
+                        </tr>
+                        <tr>
+                            <td>Amélia Adriana Martins Alves</td>
+                            <td>amia.843.adriana@microsoft.com</td>
+                            <td>986534017</td>
+                        </tr>
+                        <tr>
+                            <td>José Diego Tavares Henriques</td>
+                            <td>jos.917.diego@outlook.com</td>
+                            <td>930863651</td>
+                        </tr>
+                        <tr>
+                            <td>Rosa Teresa Barbosa Lopes</td>
+                            <td>rosa.767.teresa@hotmail.com</td>
+                            <td>968740590</td>
+                        </tr>
+                        <tr>
+                            <td>João David Henriques Barros</td>
+                            <td>jo.561.david@gmail.com</td>
+                            <td>906716574</td>
+                        </tr>
+                        <tr>
+                            <td>Ana Luísa Freitas Teixeira</td>
+                            <td>ana.698.lua@outlook.com</td>
+                            <td>914918444</td>
+                        </tr>
+                        <tr>
+                            <td>Madalena Maria Jesus Moreira</td>
+                            <td>madalena.179.maria@microsoft.com</td>
+                            <td>918504939</td>
+                        </tr>
+                        <tr>
+                            <td>Júlia Vera Silva Henriques</td>
+                            <td>jia.568.vera@outlook.com</td>
+                            <td>995340014</td>
+                        </tr>
+                        <tr>
+                            <td>Leandro Miguel Pires Lopes</td>
+                            <td>leandro.866.miguel@gmail.com</td>
+                            <td>957120919</td>
+                        </tr>
+                        <tr>
+                            <td>Hugo Luís Alves Castro</td>
+                            <td>hugo.782.lu@gmail.com</td>
+                            <td>902247920</td>
+                        </tr>
+                        <tr>
+                            <td>Miguel Rafael Guerreiro Henriques</td>
+                            <td>miguel.299.rafael@outlook.com</td>
+                            <td>990163242</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos Filipe Correia Carvalho</td>
+                            <td>carlos.473.filipe@hotmail.com</td>
+                            <td>931543835</td>
+                        </tr>
+                        <tr>
+                            <td>Matias Henrique Mendes Correia</td>
+                            <td>matias.503.henrique@hotmail.com</td>
+                            <td>945059097</td>
+                        </tr>
+                        <tr>
+                            <td>Luís Rúben Cruz Coelho</td>
+                            <td>lu.361.ren@microsoft.com</td>
+                            <td>913745111</td>
+                        </tr>
+                        <tr>
+                            <td>Filipe Diogo Ferreira Oliveira</td>
+                            <td>filipe.366.diogo@gmail.com</td>
+                            <td>938452791</td>
+                        </tr>
+                        <tr>
+                            <td>Fabiana Joana Lourenço Monteiro</td>
+                            <td>fabiana.677.joana@outlook.com</td>
+                            <td>963115317</td>
+                        </tr>
+                        <tr>
+                            <td>Filipa Sara Lima Gomes</td>
+                            <td>filipa.825.sara@microsoft.com</td>
+                            <td>915316085</td>
+                        </tr>
+                        <tr>
+                            <td>Sofia Juliana Soares Correia</td>
+                            <td>sofia.497.juliana@outlook.com</td>
+                            <td>942329324</td>
+                        </tr>
+                        <tr>
+                            <td>Beatriz Teresa Miranda Silva</td>
+                            <td>beatriz.475.teresa@hotmail.com</td>
+                            <td>904777302</td>
+                        </tr>
+                        <tr>
+                            <td>Samuel Rúben Teixeira Faria</td>
+                            <td>samuel.636.ren@microsoft.com</td>
+                            <td>990583218</td>
+                        </tr>
+                        <tr>
+                            <td>Leonardo Matias Lourenço Cardoso</td>
+                            <td>leonardo.349.matias@hotmail.com</td>
+                            <td>944526944</td>
+                        </tr>
+                        <tr>
+                            <td>Duarte Eduardo Teixeira Raposo</td>
+                            <td>duarte.596.eduardo@outlook.com</td>
+                            <td>953142559</td>
+                        </tr>
+                        <tr>
+                            <td>Francisco Bernardo Simões Soares</td>
+                            <td>francisco.191.bernardo@microsoft.com</td>
+                            <td>911625907</td>
+                        </tr>
+                        <tr>
+                            <td>António Nuno Azevedo Cardoso</td>
+                            <td>antio.454.nuno@gmail.com</td>
+                            <td>989242814</td>
+                        </tr>
+                        <tr>
+                            <td>Ricardo Leandro Ribeiro Fonseca</td>
+                            <td>ricardo.654.leandro@hotmail.com</td>
+                            <td>930800026</td>
+                        </tr>
+                        <tr>
+                            <td>Bruno Samuel Barros Correia</td>
+                            <td>bruno.308.samuel@hotmail.com</td>
+                            <td>932387959</td>
+                        </tr>
+                        <tr>
+                            <td>Rafael Pedro Jesus Miranda</td>
+                            <td>rafael.717.pedro@hotmail.com</td>
+                            <td>957360555</td>
+                        </tr>
+                        <tr>
+                            <td>José Lucas Costa Ramos</td>
+                            <td>jos.553.lucas@microsoft.com</td>
+                            <td>985340821</td>
+                        </tr>
+                        <tr>
+                            <td>Clara Beatriz Alves Rodrigues</td>
+                            <td>clara.815.beatriz@outlook.com</td>
+                            <td>951836837</td>
+                        </tr>
+                        <tr>
+                            <td>Rui Bruno Correia Soares</td>
+                            <td>rui.580.bruno@hotmail.com</td>
+                            <td>910302970</td>
+                        </tr>
+                        <tr>
+                            <td>Rita Teresa Henriques Freitas</td>
+                            <td>rita.576.teresa@microsoft.com</td>
+                            <td>998990454</td>
+                        </tr>
+                        <tr>
+                            <td>José Hugo Gonçalves Antunes</td>
+                            <td>jos.968.hugo@microsoft.com</td>
+                            <td>995036906</td>
+                        </tr>
+                        <tr>
+                            <td>Eduardo Salvador Monteiro Batista</td>
+                            <td>eduardo.746.salvador@hotmail.com</td>
+                            <td>990757434</td>
+                        </tr>
+                        <tr>
+                            <td>Dinis Santiago Sousa Azevedo</td>
+                            <td>dinis.19.santiago@microsoft.com</td>
+                            <td>986132423</td>
+                        </tr>
+                        <tr>
+                            <td>Leonardo Santiago Lima Tavares</td>
+                            <td>leonardo.773.santiago@hotmail.com</td>
+                            <td>991589172</td>
+                        </tr>
+                        <tr>
+                            <td>Eduarda Diana Nunes Barros</td>
+                            <td>eduarda.865.diana@hotmail.com</td>
+                            <td>928786423</td>
+                        </tr>
+                        <tr>
+                            <td>Eduardo Rui Coelho Castro</td>
+                            <td>eduardo.501.rui@hotmail.com</td>
+                            <td>908745126</td>
+                        </tr>
+                        <tr>
+                            <td>Eduardo Nuno Lopes Coelho</td>
+                            <td>eduardo.720.nuno@microsoft.com</td>
+                            <td>959284449</td>
+                        </tr>
+                        <tr>
+                            <td>Elisa Margarida Costa Freitas</td>
+                            <td>elisa.146.margarida@hotmail.com</td>
+                            <td>972721036</td>
+                        </tr>
+                        <tr>
+                            <td>Amélia Marta Cunha Simões</td>
+                            <td>amia.910.marta@microsoft.com</td>
+                            <td>976975196</td>
+                        </tr>
+                        <tr>
+                            <td>Lourenço Nuno Lopes Jesus</td>
+                            <td>louren.104.nuno@gmail.com</td>
+                            <td>903071821</td>
+                        </tr>
+                        <tr>
+                            <td>Helena Rita Gonçalves Raposo</td>
+                            <td>helena.812.rita@gmail.com</td>
+                            <td>981145174</td>
+                        </tr>
+                        <tr>
+                            <td>Diana Eduarda Tavares Martins</td>
+                            <td>diana.336.eduarda@microsoft.com</td>
+                            <td>905488761</td>
+                        </tr>
+                        <tr>
+                            <td>Alexandre Diogo Jesus Rocha</td>
+                            <td>alexandre.384.diogo@microsoft.com</td>
+                            <td>932327516</td>
+                        </tr>
+                        <tr>
+                            <td>David Luís Lima Machado</td>
+                            <td>david.431.lu@microsoft.com</td>
+                            <td>990395390</td>
+                        </tr>
+                        <tr>
+                            <td>Francisca Luciana Neves Simões</td>
+                            <td>francisca.68.luciana@microsoft.com</td>
+                            <td>925400091</td>
+                        </tr>
+                        <tr>
+                            <td>Margarida Maria Rodrigues Gonçalves</td>
+                            <td>margarida.184.maria@hotmail.com</td>
+                            <td>998652983</td>
+                        </tr>
+                        <tr>
+                            <td>Dinis Vasco Pereira Rocha</td>
+                            <td>dinis.115.vasco@hotmail.com</td>
+                            <td>987216038</td>
+                        </tr>
+                        <tr>
+                            <td>Júlia Adriana Batista Araújo</td>
+                            <td>jia.280.adriana@microsoft.com</td>
+                            <td>948182004</td>
+                        </tr>
+                        <tr>
+                            <td>João José Araújo Pereira</td>
+                            <td>jo.588.jos@outlook.com</td>
+                            <td>900756467</td>
+                        </tr>
+                        <tr>
+                            <td>Santiago Rodrigo Matos Carvalho</td>
+                            <td>santiago.159.rodrigo@gmail.com</td>
+                            <td>962423227</td>
+                        </tr>
+                        <tr>
+                            <td>Carolina Luciana Vieira Gonçalves</td>
+                            <td>carolina.22.luciana@gmail.com</td>
+                            <td>919376332</td>
+                        </tr>
+                        <tr>
+                            <td>Sofia Juliana Tavares Magalhães</td>
+                            <td>sofia.590.juliana@hotmail.com</td>
+                            <td>961446883</td>
+                        </tr>
+                        <tr>
+                            <td>Afonso Leandro Antunes Soares</td>
+                            <td>afonso.513.leandro@microsoft.com</td>
+                            <td>950443675</td>
+                        </tr>
+                        <tr>
+                            <td>Raquel Ana Monteiro Azevedo</td>
+                            <td>raquel.530.ana@outlook.com</td>
+                            <td>960355495</td>
+                        </tr>
+                        <tr>
+                            <td>Elisa Carolina Coelho Cunha</td>
+                            <td>elisa.617.carolina@outlook.com</td>
+                            <td>928756974</td>
+                        </tr>
+                        <tr>
+                            <td>Sofia Leonor Lima Gonçalves</td>
+                            <td>sofia.153.leonor@outlook.com</td>
+                            <td>911614809</td>
+                        </tr>
+                        <tr>
+                            <td>Diogo Bruno Cardoso Miranda</td>
+                            <td>diogo.445.bruno@outlook.com</td>
+                            <td>901532641</td>
+                        </tr>
+                        <tr>
+                            <td>Carolina Luísa Jesus Rocha</td>
+                            <td>carolina.615.lua@hotmail.com</td>
+                            <td>900295158</td>
+                        </tr>
+                        <tr>
+                            <td>José Daniel Vieira Cruz</td>
+                            <td>jos.195.daniel@hotmail.com</td>
+                            <td>952902181</td>
+                        </tr>
+                        <tr>
+                            <td>Sara Amélia Cardoso Silva</td>
+                            <td>sara.631.amia@gmail.com</td>
+                            <td>952045452</td>
+                        </tr>
+                        <tr>
+                            <td>Mafalda Luciana Magalhães Cardoso</td>
+                            <td>mafalda.567.luciana@gmail.com</td>
+                            <td>996852717</td>
+                        </tr>
+                        <tr>
+                            <td>Luís Mateus Magalhães Ribeiro</td>
+                            <td>lu.293.mateus@microsoft.com</td>
+                            <td>957497850</td>
+                        </tr>
+                        <tr>
+                            <td>Hugo Alexandre Soares Faria</td>
+                            <td>hugo.357.alexandre@gmail.com</td>
+                            <td>969248467</td>
+                        </tr>
+                        <tr>
+                            <td>Inês Sofia Mendes Henriques</td>
+                            <td>in.908.sofia@gmail.com</td>
+                            <td>905506437</td>
+                        </tr>
+                        <tr>
+                            <td>Débora Eva Castro Costa</td>
+                            <td>dora.480.eva@gmail.com</td>
+                            <td>909920867</td>
+                        </tr>
+                        <tr>
+                            <td>Gustavo Daniel Azevedo Lourenço</td>
+                            <td>gustavo.854.daniel@microsoft.com</td>
+                            <td>942145180</td>
+                        </tr>
+                        <tr>
+                            <td>Lourenço David Costa Simões</td>
+                            <td>louren.441.david@hotmail.com</td>
+                            <td>981815739</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // tradução para português
+        $(document).ready(function () {
+
+            // datatable
+            $('#tabela').DataTable({
+                pageLength: 10,
+                pagingType: "full_numbers",
+                language: {
+                    decimal: "",
+                    emptyTable: "Sem dados disponíveis na tabela.",
+                    info: "Mostrando _START_ até _END_ de _TOTAL_ registos",
+                    infoEmpty: "Mostrando 0 até 0 de 0 registos",
+                    infoFiltered: "(Filtrando _MAX_ total de registos)",
+                    infoPostFix: "",
+                    thousands: ",",
+                    lengthMenu: "Mostrando _MENU_ registos por página.",
+                    loadingRecords: "Carregando...",
+                    processing: "Processando...",
+                    search: "Filtrar:",
+                    zeroRecords: "Nenhum registro encontrado.",
+                    paginate: {
+                        first: "Primeira",
+                        last: "Última",
+                        next: "Seguinte",
+                        previous: "Anterior"
+                    },
+                    aria: {
+                        sortAscending: ": ative para classificar a coluna em ordem crescente.",
+                        sortDescending: ": ative para classificar a coluna em ordem decrescente."
+                    }
+                }
+            });
+        })
+
+    </script>
+
+</body>
+
+</html>
