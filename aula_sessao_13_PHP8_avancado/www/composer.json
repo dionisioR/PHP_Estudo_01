@@ -6,7 +6,9 @@
             "name": "rd3w"
         }
     ],
-    "require": {},
+    "require": {
+        "monolog/monolog": "^3.8"
+    },
     "autoload": {
         "psr-4": {
             "bng\\Controllers\\": ["app/controllers"],

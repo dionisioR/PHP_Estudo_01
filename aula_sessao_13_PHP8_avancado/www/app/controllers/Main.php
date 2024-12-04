@@ -16,8 +16,11 @@ class Main extends BaseController
             return;
         }
 
+        $data["user"] = $_SESSION["user"];
         $this->view('layouts/html_header');
-        echo '<h3 class="text-white text-center">Olá mundo!</h3>';
+        $this->view("navbar", $data);
+        $this->view("homepage", $data);
+        $this->view("footer");
         $this->view('layouts/html_footer');
     }
 
@@ -100,16 +103,23 @@ class Main extends BaseController
         //===============================================
         $model = new Agents();
         $result = $model->check_login($username, $password);
-        
-        if(!$result['status']){
+
+        if (!$result['status']) {
+
+            // loger
+            logger("$username - login inválido", 'error');
             // invalid login
             $_SESSION['server_error'] = 'Login inválido!';
             $this->login_frm();
             return;
         }
+
+        // loger
+        logger("$username - login com sucesso");
+
         // load user information to the session
         $results = $model->get_user_data($username);
-       
+
         // add user to session
         $_SESSION['user'] = $results['data'];
 
@@ -117,6 +127,22 @@ class Main extends BaseController
         $results = $model->set_user_last_login($_SESSION['user']->id);
 
         // go to main page
+        $this->index();
+    }
+    //===============================================
+    public function logout()
+    {
+        // disable direct access to logout
+        if(!check_session()){
+            $this->index();
+            return;
+        }
+        // loger
+        logger($_SESSION['user']->name . " - fez logout!");
+
+        // remove user from session
+        unset($_SESSION['user']);
+        // vai para o index (login form)
         $this->index();
     }
 }

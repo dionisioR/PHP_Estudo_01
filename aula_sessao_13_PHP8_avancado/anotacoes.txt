@@ -96,3 +96,12 @@ Criando o autoload
 - no terminal digite 'composer dump-autoload -o
 -- isso fará com que todo o projeto seja rederizado e a pasta 'vendor' será criada com os arquivos de autoload.
 -- Não devemos mexer nesta pasta / arquivos.
+
+=====================================
+https://packagist.org/
+=====================================
+Repositório padrão de pacotes para o composer
+
+https://packagist.org/packages/monolog/monolog
+https://github.com/Seldaek/monolog
+
