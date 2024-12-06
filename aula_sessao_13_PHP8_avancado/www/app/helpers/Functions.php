@@ -1,46 +1,53 @@
-<?php 
+<?php
 
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
-function check_session(){
-    // verifica se tem alguma sessão ativa
+function check_session()
+{
+    // check if there is an active session
     return isset($_SESSION['user']);
 }
 
-
-function logger ($mensagem='', $level='info'){
-    // cria um canal de logs
+function logger($message = '', $level = 'info')
+{
+    // create log channel
     $log = new Logger('app_logs');
     $log->pushHandler(new StreamHandler(LOGS_PATH));
 
-    // adiciona registro de logs condicionado pelo level
-    switch($level){
+    // add log message
+    switch ($level) {
         case 'info':
-            $log->info($mensagem);
+            $log->info($message);
             break;
         case 'notice':
-            $log->notice($mensagem);
+            $log->notice($message);
             break;
         case 'warning':
-            $log->warning($mensagem);
+            $log->warning($message);
             break;
         case 'error':
-            $log->error($mensagem);
+            $log->error($message);
             break;
         case 'critical':
-            $log->critical($mensagem);
+            $log->critical($message);
+            break;
+        case 'alert':
+            $log->alert($message);
             break;
         case 'emergency':
-            $log->emergency($mensagem);
+            $log->emergency($message);
             break;
+        
         default:
-            $log->info($mensagem);
+            $log->info($message);
             break;
     }
 }
 
-function printData($data, $die=true){
+function printData($data, $die = true)
+{
+    // debug
     echo '<pre>';
     if(is_object($data) || is_array($data)){
         print_r($data);
@@ -49,7 +56,6 @@ function printData($data, $die=true){
     }
 
     if($die){
-        die('<br>FIM<br>');
+        die('<br>FIM</br>');
     }
 }
-
